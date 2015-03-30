@@ -16,7 +16,7 @@
 
 	<script type="text/javascript">
 
-
+		// Mapping appropriate condition to font
 		var icons = {	"clear-day" : "B", 
 						"clear-night" : "C", 
 						"rain" : "R", 
@@ -27,8 +27,9 @@
 						"cloudy" : "Y",
 						"partly-cloudy-day" : "H", 
 						"partly-cloudy-night" : "I"
-					}; // Mapping appropriate condition to font
+					}; 
 
+		// Find geo loc at: geocoder.us
 		var cities = {	
 						"new york" 		: 	{coords: {latitude: 40.672060, longitude:-73.983898}},
 						"los angeles" 	: 	{coords: {latitude: 34.101422, longitude: -118.341224}},
@@ -36,8 +37,9 @@
 						"san francisco" : 	{coords: {latitude: 37.788531, longitude: -122.407237}},
 						"miami" 		:	{coords: {latitude: 25.790176, longitude: -80.140133}},
 						"current location" : ""
-					 }; // Find geo loc at: geocoder.us
+					 };
 
+		// Pulls weather information from Forecast.io using their API
 		function loadWeather(cityCoords){
 
 			var latlng = cityCoords.coords.latitude + "," + cityCoords.coords.longitude;
